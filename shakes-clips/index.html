@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakes Clips - Your Video Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="alertContainer" style="position: fixed; top: 20px; right: 20px; z-index: 2000;"></div>
+
+    <header>
+        <h1>🎬 Shakes Clips</h1>
+        <p>Watch, Comment, Enjoy!</p>
+    </header>
+
+    <div class="container">
+        <div class="video-grid" id="videoGrid">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <!-- Video Player -->
+            <div class="video-player-container">
+                <video id="videoPlayer" controls></video>
+                <button class="close-btn">✕</button>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <div class="comments-header">Comments</div>
+
+                <!-- Comment Form -->
+                <form class="comment-form" id="commentForm">
+                    <input 
+                        type="text" 
+                        id="commentName" 
+                        placeholder="Your Name" 
+                        required 
+                        maxlength="100"
+                    >
+                    <input 
+                        type="email" 
+                        id="commentEmail" 
+                        placeholder="Your Email" 
+                        required
+                    >
+                    <textarea 
+                        id="commentText" 
+                        placeholder="Write your comment here..." 
+                        required 
+                        maxlength="1000"
+                    ></textarea>
+                    <button type="submit" class="submit-btn">Post Comment</button>
+                </form>
+
+                <!-- Comments List -->
+                <div class="comments-list" id="commentsList">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>📞 Contact: <a href="tel:+254702060628">+254702060628</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
